@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>1a864122-97f2-4b00-be78-5dfc705ee92c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\SmartPark.Domain.csproj" />
+    <ProjectReference Include="..\Repositories\SmartPark.Repositories.Databases.MongoDb\SmartPark.Repositories.Databases.MongoDb.csproj" />
+    <ProjectReference Include="..\Services\SmartPark.Services\SmartPark.Services.csproj" />
+  </ItemGroup>
+
+</Project>
