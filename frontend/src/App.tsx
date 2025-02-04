@@ -1,11 +1,11 @@
-import { Button } from "@mui/material"
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <>
-      <Button variant="contained">Hello world</Button>
-    </>
-  )
+    <Layout>
+      <h1>Bem-vindo ao SmartPark</h1>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
