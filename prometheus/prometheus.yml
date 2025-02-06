@@ -8,7 +8,6 @@ scrape_configs:
       - targets:
           - smartpark_api:5000
           - smartpark_api:5001
-          - smartpark_api:5002
 
   - job_name: 'postgres'
     static_configs:
