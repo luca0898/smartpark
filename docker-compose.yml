@@ -6,9 +6,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/certs:/etc/letsencrypt
-      - ./nginx/www:/var/www/html
+      - ./nginx.conf.d:/etc/nginx/conf.d
     depends_on:
       - api
       - frontend
@@ -20,10 +18,13 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     deploy:
+      mode: replicated
       replicas: 3
+      restart_policy:
+        condition: on-failure
     ports:
-      - "5000-5002:5000"
-      - "5001-5003:5001"
+      - "5000:5000"
+      - "5001:5001"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - CONNECTION_STRING=Host=postgres_writer;Port=5432;Database=smartpark;Username=admin;Password=admin
@@ -108,7 +109,7 @@ services:
     image: prom/prometheus:latest
     container_name: smartpark_prometheus
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     networks:
