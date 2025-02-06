@@ -23,8 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.SERVICES", "3.SERVICES", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPark.Services", "Services\SmartPark.Services\SmartPark.Services.csproj", "{8DEFF8AD-2BDD-4F6D-A9DA-21B03FF5F912}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{443BE87D-A57A-4A70-899E-C6F81477CB3A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,10 +49,6 @@ Global
 		{8DEFF8AD-2BDD-4F6D-A9DA-21B03FF5F912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DEFF8AD-2BDD-4F6D-A9DA-21B03FF5F912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DEFF8AD-2BDD-4F6D-A9DA-21B03FF5F912}.Release|Any CPU.Build.0 = Release|Any CPU
-		{443BE87D-A57A-4A70-899E-C6F81477CB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{443BE87D-A57A-4A70-899E-C6F81477CB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{443BE87D-A57A-4A70-899E-C6F81477CB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{443BE87D-A57A-4A70-899E-C6F81477CB3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
